@@ -12,6 +12,15 @@
 | `JOURNAL.md` | 按时间顺序的会话日志（人读） | 人 + DSH |
 | `state.json` | 最新一条机器可读状态（机读） | DSH |
 | `machines.json` | 各机器/地点的昵称与启用开关 | 人配置 |
+| `.dsh/skills/dsh-journal-sync/SKILL.md` | 本工作流 skill 自身 | DSH（随仓库同步） |
+| `setup_link.cmd` | 每台机一次性设置（建 skill 联接） | 人运行 |
+
+## skill 的同步机制（免手动拷贝）
+
+DSH 会扫描 `~\.dsh\skills`（用户级，任何会话都生效）。把该目录下的
+`dsh-journal-sync` 做成 **junction 联接到本仓库** `.dsh/skills/dsh-journal-sync`：
+文件只有仓库内一份，`git pull` 即更新，两端永远一致。每台电脑跑一次
+`setup_link.cmd` 即可（或手动 `mklink /J`）。
 
 ## 工作方式（两端一致）
 

@@ -1,9 +1,9 @@
 {
   "repo": "naiping87/dsh-worklog",
   "branch": "main",
-  "updated_at": "2026-08-22T18:30",
-  "machine": "初始化",
-  "summary": "搭建 dsh-worklog 中心日志仓库；确立跨机工作同步方案。",
-  "files": ["README.md", "JOURNAL.md", "state.json", "machines.json"],
-  "next_steps": ["在 GitHub 建空仓库 naiping87/dsh-worklog", "登录凭证后把本地仓库首次 push 上去"]
+  "updated_at": "2026-08-22T19:00",
+  "machine": "新山",
+  "summary": "GitHub 建仓并首次 push；skill 放入仓库 .dsh/skills 并 junction 联接实现自动同步，旧方案弃用。",
+  "files": [".dsh/skills/dsh-journal-sync/SKILL.md", "setup_link.cmd", "README.md", "JOURNAL.md", "state.json", "machines.json"],
+  "next_steps": ["在 Pontian 那台 clone 仓库 + 跑 setup_link.cmd + 配 machines.json 机名"]
 }
