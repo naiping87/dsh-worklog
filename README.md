@@ -22,6 +22,21 @@ DSH 会扫描 `~\.dsh\skills`（用户级，任何会话都生效）。把该目
 文件只有仓库内一份，`git pull` 即更新，两端永远一致。每台电脑跑一次
 `setup_link.cmd` 即可（或手动 `mklink /J`）。
 
+## 新电脑接入（3 步，约 5 分钟）
+
+```powershell
+# 1) 确保 GitHub 账户已登录（私库需凭证）
+git ls-remote https://github.com/naiping87/dsh-worklog.git   # 有输出即可
+
+# 2) clone 到与其它机器相同的路径
+git clone https://github.com/naiping87/dsh-worklog.git "C:\Users\User\Documents\deep seek harness\dsh-worklog"
+
+# 3) 建立 skill 联接（让 DSH 自动发现仓库内的 skill）
+cmd /c ""C:\Users\User\Documents\deep seek harness\dsh-worklog\setup_link.cmd""
+```
+
+然后确认 `machines.json` 里有这台机的名字（没有就补一行，改完 `git pull` 后再 `git add machines.json && git commit -m "machine" && git push`）。
+
 ## 工作方式（两端一致）
 
 - **开工前**：`git pull --rebase --autostash origin main` → 读 `JOURNAL.md` 尾 + `state.json` → 报告上次在哪台机做到哪、下一步是什么，并作为本次上下文。
