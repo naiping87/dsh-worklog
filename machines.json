@@ -2,6 +2,7 @@
   "description": "每台电脑的昵称/地点，用于在日志里标注是哪台机器做的。key 用 hostname 或自定义名。",
   "machines": {
     "JB": {"alias": "新山", "enabled": true},
-    "Pontian": {"alias": "笨珍", "enabled": true}
+    "Pontian": {"alias": "笨珍", "enabled": true},
+    "LEIAAAAAA": {"alias": "LEIAAAAAA", "enabled": true}
   }
 }

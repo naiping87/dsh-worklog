@@ -22,3 +22,8 @@
 - 做了什么：terence 机接入 dsh-worklog 同步。克隆仓库到本机工作区（C:\Users\ediso\OneDrive\Documents\harness\dsh-worklog），按 skill 规范把 08-22 凌晨视觉排查补记入本日志、更新 state.json 并 push；同时整理出「全新 dsh 机器接入」指引。另：本机 pwsh 曾持续 0xC0000142（STATUS_DLL_INIT_FAILED）崩溃、数日后自行恢复，期间以文件工具+node 脚本绕过。
 - 涉及文件：JOURNAL.md、state.json
 - 下一步：第三台（全新 dsh）照 README/SKILL 接入：装 git 并登录 GitHub 凭证 → clone 统一路径 → 跑 setup_link.cmd → machines.json 补该机名；接入后按「开工 pull+读 / 收尾写+push」日常同步。
+
+## 2026-08-26 02:19 · LEIAAAAAA
+- 做了什么：LEIAAAAAA 机接入 dsh-worklog 同步。本机原无 git，先用 winget 装 Git 2.55.0.3；仓库先前为 private，匿名 clone 挂起（API 404），改公开后 clone 成功到统一路径 C:\Users\User\Documents\deep seek harness\dsh-worklog；随后跑 setup_link.cmd 建 junction（~\.dsh\skills\dsh-journal-sync → 仓库 .dsh\skills\dsh-journal-sync），DSH 会话内自动发现并加载 dsh-journal-sync skill；按 skill 开工流程 fetch/pull 后读 JOURNAL.md 尾部 + state.json 汇报上下文，并按收尾规则更新本日志、state.json、machines.json。
+- 涉及文件：setup_link.cmd（运行）、JOURNAL.md、state.json、machines.json
+- 下一步：配置本机 GitHub 凭证（gh auth login / PAT）以便后续 push；视觉问题下结论（验证 vision-exp 对 RGBA PNG 原生支持 / ModLens+Gemini / deepseek-vision-gateway）；其余新机照 README/SKILL 3 步接入。
