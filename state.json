@@ -1,9 +1,9 @@
 {
   "repo": "naiping87/dsh-worklog",
   "branch": "main",
-  "updated_at": "2026-08-22T19:00",
-  "machine": "新山",
-  "summary": "GitHub 建仓并首次 push；skill 放入仓库 .dsh/skills 并 junction 联接实现自动同步，旧方案弃用。",
-  "files": [".dsh/skills/dsh-journal-sync/SKILL.md", "setup_link.cmd", "README.md", "JOURNAL.md", "state.json", "machines.json"],
-  "next_steps": ["在 Pontian 那台 clone 仓库 + 跑 setup_link.cmd + 配 machines.json 机名"]
+  "updated_at": "2026-08-26 01:22",
+  "machine": "terence",
+  "summary": "terence 机接入同步：补记 08-22 凌晨 DeepSeek 视觉排查（贴图 400 / 文件合法 / API 端拒、结论未定论），更新日志并 push；新机接入指引已就绪。",
+  "files": ["JOURNAL.md", "state.json"],
+  "next_steps": ["第三台全新 dsh 机器接入：git+凭证 → clone 统一路径 → setup_link.cmd → machines.json 补机名", "视觉问题下结论：验证 vision-exp 对 RGBA PNG 原生支持 / 或 ModLens+Gemini / 或 deepseek-vision-gateway"]
 }
